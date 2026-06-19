@@ -1,0 +1,140 @@
+.hero {
+    position: relative;
+    width: 100%;
+    min-height: 620px;
+    background-color: #1a1a1a;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+            to right,
+            rgba(0, 0, 0, 0.75) 0%,
+            rgba(0, 0, 0, 0.45) 55%,
+            rgba(0, 0, 0, 0.05) 100%
+    );
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    max-width: 520px;
+    padding: 4rem 3rem 4rem 5rem;
+}
+
+.hero-eyebrow {
+    color: #d29c28;
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 1rem;
+}
+
+.hero-headline {
+    color: #ffffff;
+    font-size: 3rem;
+    font-weight: 800;
+    line-height: 1.15;
+    margin-bottom: 1.25rem;
+    text-transform: uppercase;
+}
+
+.hero-highlight {
+    color: #d29c28;
+}
+
+.hero-sub {
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 0.95rem;
+    line-height: 1.7;
+    margin-bottom: 2rem;
+    max-width: 400px;
+}
+
+.hero-btns {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.btn-primary-hero {
+    background: #d29c28;
+    color: white;
+    text-decoration: none;
+    padding: 14px 28px;
+    border-radius: 6px;
+    font-weight: 700;
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+    transition: background 0.2s;
+}
+
+.btn-primary-hero:hover {
+    background: #b98618;
+    color: white;
+}
+
+.btn-secondary-hero {
+    background: transparent;
+    color: white;
+    text-decoration: none;
+    padding: 14px 28px;
+    border-radius: 6px;
+    font-weight: 700;
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+    border: 2px solid rgba(255, 255, 255, 0.7);
+    transition: border-color 0.2s, color 0.2s;
+}
+
+.btn-secondary-hero:hover {
+    border-color: white;
+    color: white;
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+    .hero {
+        min-height: 520px;
+    }
+
+    .hero-content {
+        padding: 3rem 2rem;
+    }
+
+    .hero-headline {
+        font-size: 2.2rem;
+    }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+    .hero {
+        min-height: 480px;
+    }
+
+    .hero-content {
+        padding: 2.5rem 1.5rem;
+    }
+
+    .hero-headline {
+        font-size: 1.8rem;
+    }
+
+    .hero-eyebrow {
+        font-size: 0.7rem;
+    }
+
+    .btn-primary-hero,
+    .btn-secondary-hero {
+        padding: 11px 20px;
+        font-size: 0.78rem;
+    }
+}

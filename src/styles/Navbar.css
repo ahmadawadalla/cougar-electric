@@ -1,0 +1,213 @@
+.navbar {
+    min-height: 110px;
+    border-bottom: 1px solid #e8e8e8;
+    position: relative;
+}
+
+/* ── DESKTOP (1400px+): flex with absolutely centered logo ── */
+@media (min-width: 1400px) {
+    .navbar {
+        position: relative;
+    }
+
+    .navbar-layout {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .nav-menu {
+        flex-grow: 0 !important;
+        flex-shrink: 0;
+        position: relative;
+        z-index: 2;
+    }
+
+    .logo-wrapper {
+        position: absolute;
+        left: 55%;
+        transform: translateX(-50%);
+        display: flex;
+        justify-content: center;
+        z-index: 0;
+    }
+
+    .phone-btn-wrapper {
+        flex-shrink: 0;
+        margin-left: auto;
+        position: relative;
+        z-index: 2;
+    }
+
+    .navbar-logo {
+        height: 80px;
+    }
+
+    .menu-button {
+        display: none;
+    }
+}
+
+/* ── MOBILE (below 1400px): grid with hamburger ── */
+@media (max-width: 1399px) {
+    .navbar-layout {
+        display: grid;
+        grid-template-columns: auto 1fr auto;
+        grid-template-rows: auto auto;
+        align-items: center;
+    }
+
+    .menu-button {
+        grid-column: 1;
+        grid-row: 1;
+    }
+
+    .logo-wrapper {
+        grid-column: 2;
+        grid-row: 1;
+        display: flex;
+        justify-content: center;
+    }
+
+    .phone-btn-wrapper {
+        grid-column: 3;
+        grid-row: 1;
+    }
+
+    .nav-menu {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        width: 100%;
+        background: white;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        padding: 0.5rem 1.5rem;
+        z-index: 999;
+    }
+
+    .nav-menu .navbar-nav {
+        gap: 0 !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    .nav-menu .nav-item {
+        padding: 0.5rem 0;
+        border-bottom: 1px solid #f0f0f0;
+        margin: 0 !important;
+    }
+
+    .nav-menu .nav-item:last-child {
+        border-bottom: none;
+    }
+
+    .nav-menu .nav-link {
+        padding: 0.25rem 0 !important;
+    }
+
+    .navbar-layout {
+        position: relative;
+    }
+
+    .navbar-logo {
+        height: 55px;
+    }
+
+    .phone-btn {
+        padding: 9px 12px;
+        font-size: 0.85rem;
+    }
+}
+
+/* ── SMALL (below 500px): shrink logo, hamburger, phone further ── */
+@media (max-width: 500px) {
+    .navbar {
+        min-height: 70px;
+    }
+
+    .navbar-logo {
+        height: 38px;
+    }
+
+    .phone-btn {
+        padding: 6px 8px !important;
+        font-size: 0.72rem !important;
+        gap: 4px !important;
+    }
+
+    .navbar-toggler {
+        padding: 4px 6px !important;
+        font-size: 0.75rem !important;
+    }
+
+    .navbar-toggler-icon {
+        width: 1.2em !important;
+        height: 1.2em !important;
+    }
+}
+
+/* ── EXTRA SMALL (below 350px): shrink even more ── */
+@media (max-width: 350px) {
+    .navbar-logo {
+        height: 30px;
+    }
+
+    .phone-btn {
+        padding: 5px 6px !important;
+        font-size: 0.65rem !important;
+    }
+
+    .navbar-toggler {
+        padding: 3px 5px !important;
+    }
+
+    .navbar-toggler-icon {
+        width: 1em !important;
+        height: 1em !important;
+    }
+}
+
+/* ── SHARED styles ── */
+.phone-btn {
+    background: #d29c28;
+    color: white !important;
+    border: none;
+    padding: 14px 22px;
+    border-radius: 8px;
+    font-size: 1.05rem;
+    font-weight: 700;
+    letter-spacing: 0.3px;
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    transition: background 0.2s;
+}
+
+.phone-btn:hover {
+    background: #b98618;
+    color: white !important;
+}
+
+.navbar-logo {
+    width: auto;
+    display: block;
+}
+
+.nav-link {
+    color: #222 !important;
+    letter-spacing: 0.5px;
+    font-size: 0.92rem;
+}
+
+.nav-link:hover {
+    color: #c8911f !important;
+}
+
+.dropdown-item:hover {
+    color: #c8911f;
+    background: #fdf6e8;
+}
