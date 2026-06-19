@@ -2,7 +2,7 @@ import shieldIcon from "../assets/Trustbar_Images/sheild.png";
 import lightningIcon from "../assets/Trustbar_Images/lightning_bolt.png";
 import clockIcon from "../assets/Trustbar_Images/clock.png";
 import customerIcon from "../assets/Trustbar_Images/customer.png";
-import "../styles/TrustBar.css";
+import "../styles/Trustbar.css";
 
 const items = [
     {
