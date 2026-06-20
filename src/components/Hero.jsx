@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+import ScrollLink from "./ScrollLink";
 import heroBg from "../assets/hero.png";
 import "../styles/Hero.css";
 
@@ -18,8 +20,8 @@ function Hero() {
                     and a commitment to safety.
                 </p>
                 <div className="hero-btns">
-                    <a href="#" className="btn-primary-hero">REQUEST A QUOTE →</a>
-                    <a href="#" className="btn-secondary-hero">OUR SERVICES →</a>
+                    <Link to="/contact" className="btn-primary-hero">REQUEST A QUOTE →</Link>
+                    <ScrollLink to="/#services" className="btn-secondary-hero">OUR SERVICES →</ScrollLink>
                 </div>
             </div>
         </section>

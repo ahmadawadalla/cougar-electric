@@ -27,9 +27,9 @@ const items = [
     },
 ];
 
-function TrustBar() {
+function Trustbar() {
     return (
-        <section className="trust-bar">
+        <section className="trust-bar" id="trust">
             {items.map((item, i) => (
                 <div className="trust-item" key={i}>
                     <img src={item.icon} alt={item.title} className="trust-icon" />
@@ -43,4 +43,4 @@ function TrustBar() {
     );
 }
 
-export default TrustBar;
+export default Trustbar;

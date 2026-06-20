@@ -7,3 +7,14 @@ body {
     max-width: 100%;
     overflow-x: hidden;
 }
+
+html {
+    scroll-behavior: smooth;
+}
+
+#trust,
+#services,
+#reviews,
+#service-areas {
+    scroll-margin-top: 110px;
+}

@@ -1,0 +1,51 @@
+.coming-soon {
+    min-height: 55vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 4rem 1.5rem;
+}
+
+.coming-soon-eyebrow {
+    color: #d29c28;
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin: 0 0 0.75rem 0;
+}
+
+.coming-soon-title {
+    color: #1a1a1a;
+    font-size: 2.2rem;
+    font-weight: 800;
+    margin: 0 0 1rem 0;
+}
+
+.coming-soon-text {
+    color: #666;
+    font-size: 0.95rem;
+    max-width: 420px;
+    margin: 0 0 2rem 0;
+    line-height: 1.6;
+}
+
+.coming-soon-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: #d29c28;
+    color: #fff;
+    text-decoration: none;
+    padding: 14px 28px;
+    border-radius: 8px;
+    font-weight: 700;
+    transition: background 0.2s, transform 0.2s;
+}
+
+.coming-soon-cta:hover {
+    background: #b98618;
+    transform: translateY(-2px);
+    color: #fff;
+}

@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+import ScrollLink from "./ScrollLink";
 import logo from "../assets/logo.png";
 import "../styles/Navbar.css";
 
@@ -23,26 +25,12 @@ function Navbar() {
                 <div className="collapse navbar-collapse nav-menu" id="mainNavbar">
                     <ul className="navbar-nav gap-lg-3">
 
-                        <li className="nav-item dropdown">
-                            <a className="nav-link dropdown-toggle fw-bold text-uppercase" href="#" role="button" data-bs-toggle="dropdown">
-                                Services
-                            </a>
-                            <ul className="dropdown-menu">
-                                <li><a className="dropdown-item" href="#">Residential</a></li>
-                                <li><a className="dropdown-item" href="#">Commercial</a></li>
-                                <li><a className="dropdown-item" href="#">EV Chargers</a></li>
-                            </ul>
+                        <li className="nav-item">
+                            <ScrollLink className="nav-link fw-bold text-uppercase" to="/#services">Services</ScrollLink>
                         </li>
 
-                        <li className="nav-item dropdown">
-                            <a className="nav-link dropdown-toggle fw-bold text-uppercase" href="#" role="button" data-bs-toggle="dropdown">
-                                Service Areas
-                            </a>
-                            <ul className="dropdown-menu">
-                                <li><a className="dropdown-item" href="#">Sacramento</a></li>
-                                <li><a className="dropdown-item" href="#">Folsom</a></li>
-                                <li><a className="dropdown-item" href="#">Roseville</a></li>
-                            </ul>
+                        <li className="nav-item">
+                            <ScrollLink className="nav-link fw-bold text-uppercase" to="/#service-areas">Service Areas</ScrollLink>
                         </li>
 
                         <li className="nav-item dropdown">
@@ -50,22 +38,22 @@ function Navbar() {
                                 Resources
                             </a>
                             <ul className="dropdown-menu">
-                                <li><a className="dropdown-item" href="#">Blog</a></li>
-                                <li><a className="dropdown-item" href="#">Videos</a></li>
+                                <li><Link className="dropdown-item" to="/resources">Blog</Link></li>
+                                <li><ScrollLink className="dropdown-item" to="/#reviews">Reviews</ScrollLink></li>
                             </ul>
                         </li>
 
                         <li className="nav-item">
-                            <a className="nav-link fw-bold text-uppercase" href="#">About Us</a>
+                            <Link className="nav-link fw-bold text-uppercase" to="/about">About Us</Link>
                         </li>
 
                     </ul>
                 </div>
 
                 {/* CENTER: Logo */}
-                <a className="navbar-brand logo-wrapper m-0" href="/">
+                <Link className="navbar-brand logo-wrapper m-0" to="/">
                     <img src={logo} alt="Cougar Electric Inc." className="navbar-logo" />
-                </a>
+                </Link>
 
                 {/* RIGHT: Phone button */}
                 <div className="phone-btn-wrapper">

@@ -37,6 +37,11 @@
     height: 42px;
     flex-shrink: 0;
     object-fit: contain;
+    transition: transform 0.25s ease;
+}
+
+.trust-item:hover .trust-icon {
+    transform: scale(1.08);
 }
 
 .trust-text {

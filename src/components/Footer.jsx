@@ -1,16 +1,18 @@
+import { Link } from "react-router-dom";
+import ScrollLink from "./ScrollLink";
 import "../styles/Footer.css";
 
 const quickLinks = [
-    "Home",
-    "About Us",
-    "Services",
-    "Service Areas",
-    "Resources",
-    "Financing",
-    "Maintenance Plans",
-    "Reviews",
-    "Careers",
-    "Contact Us",
+    { label: "Home", to: "/" },
+    { label: "About Us", to: "/about" },
+    { label: "Services", to: "/#services" },
+    { label: "Service Areas", to: "/#service-areas" },
+    { label: "Resources", to: "/resources" },
+    { label: "Financing", to: "/financing" },
+    { label: "Maintenance Plans", to: "/maintenance-plans" },
+    { label: "Reviews", to: "/#reviews" },
+    { label: "Careers", to: "/careers" },
+    { label: "Contact Us", to: "/contact" },
 ];
 
 function Footer() {
@@ -33,9 +35,9 @@ function Footer() {
                         ></iframe>
                     </div>
 
-                    <a href="#" className="footer-btn footer-btn-white">
+                    <Link to="/contact" className="footer-btn footer-btn-white">
                         SCHEDULE MY SERVICE <span className="footer-arrow">›</span>
-                    </a>
+                    </Link>
                     <a href="tel:9165249636" className="footer-btn footer-btn-gold">
                         916-524-9636 <span className="footer-arrow">›</span>
                     </a>
@@ -45,14 +47,18 @@ function Footer() {
                 <div className="footer-col footer-links-col">
                     <h3 className="footer-heading">QUICK LINKS</h3>
                     <ul className="footer-link-list">
-                        {quickLinks.map((link, i) => (
-                            <li className="footer-link-item" key={i}>
-                                <a href="#" className="footer-link">
-                                    {link}
-                                    <span className="footer-link-arrow">↗</span>
-                                </a>
-                            </li>
-                        ))}
+                        {quickLinks.map((link, i) => {
+                            const isHash = link.to.includes("#");
+                            const LinkComponent = isHash ? ScrollLink : Link;
+                            return (
+                                <li className="footer-link-item" key={i}>
+                                    <LinkComponent to={link.to} className="footer-link">
+                                        {link.label}
+                                        <span className="footer-link-arrow">↗</span>
+                                    </LinkComponent>
+                                </li>
+                            );
+                        })}
                     </ul>
                 </div>
 

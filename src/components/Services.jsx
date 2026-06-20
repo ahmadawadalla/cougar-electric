@@ -1,8 +1,10 @@
+import { useState } from "react";
 import panelIcon from "../assets/Service_Images/electrical_panel.png";
 import evIcon from "../assets/Service_Images/ev_charger.png";
 import buildingIcon from "../assets/Service_Images/building.png";
 import lightbulbIcon from "../assets/Service_Images/lightbulb.png";
 import screwdriverIcon from "../assets/Service_Images/screwdriver.png";
+import QuoteModal from "./QuoteModal.jsx";
 import "../styles/Services.css";
 
 const services = [
@@ -34,17 +36,31 @@ const services = [
 ];
 
 function Services() {
+    const [selectedService, setSelectedService] = useState(null);
+
     return (
-        <section className="services">
+        <section className="services" id="services">
             {services.map((s, i) => (
-                <div className="service-card" key={i}>
+                <button
+                    className="service-card"
+                    key={i}
+                    onClick={() => setSelectedService(s.title)}
+                    type="button"
+                >
                     <img src={s.icon} alt={s.title} className="service-icon" />
                     <div className="service-text">
                         <h3 className="service-title">{s.title}</h3>
                         <p className="service-desc">{s.desc}</p>
                     </div>
-                </div>
+                </button>
             ))}
+
+            {selectedService && (
+                <QuoteModal
+                    service={selectedService}
+                    onClose={() => setSelectedService(null)}
+                />
+            )}
         </section>
     );
 }
