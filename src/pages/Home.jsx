@@ -1,15 +1,17 @@
-import Navbar from "../components/Navbar.jsx";
-import Hero from "../components/Hero.jsx";
-import TrustBar from "../components/Trustbar.jsx";
-import Services from "../components/Services.jsx";
+import Navbar from "../components/Navbar";
+import Hero from "../components/Hero";
+import Trustbar from "../components/Trustbar";
+import Services from "../components/Services";
+import Footer from "../components/Footer";
 
 function Home() {
     return (
         <>
             <Navbar />
             <Hero />
-            <TrustBar />
+            <Trustbar />
             <Services />
+            <Footer />
         </>
     );
 }
