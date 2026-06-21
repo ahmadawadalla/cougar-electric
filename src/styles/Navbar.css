@@ -27,7 +27,7 @@
     .logo-wrapper {
         position: absolute;
         left: 55%;
-        transform: translateX(-50%);
+        transform: translateX(-90%);
         display: flex;
         justify-content: center;
         z-index: 0;

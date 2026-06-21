@@ -6,7 +6,7 @@ function ComingSoon({ title }) {
     return (
         <>
             <Navbar />
-            <section className="coming-soon">
+            <section className="coming-soon" id="page-content">
                 <p className="coming-soon-eyebrow">PAGE IN PROGRESS</p>
                 <h1 className="coming-soon-title">{title}</h1>
                 <p className="coming-soon-text">

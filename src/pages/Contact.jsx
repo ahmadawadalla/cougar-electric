@@ -18,7 +18,7 @@ function Contact() {
     return (
         <>
             <Navbar />
-            <section className="contact-page">
+            <section className="contact-page" id="page-content">
                 <div className="contact-inner">
                     <div className="contact-intro">
                         <p className="contact-eyebrow">GET IN TOUCH</p>

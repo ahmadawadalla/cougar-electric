@@ -18,3 +18,20 @@ html {
 #service-areas {
     scroll-margin-top: 110px;
 }
+
+/* Brief highlight flash when a section is navigated to via nav/footer links */
+.section-highlight {
+    animation: sectionPulse 1.6s ease-out;
+}
+
+@keyframes sectionPulse {
+    0% {
+        box-shadow: inset 0 0 0 9999px rgba(210, 156, 40, 0.28);
+    }
+    70% {
+        box-shadow: inset 0 0 0 9999px rgba(210, 156, 40, 0.28);
+    }
+    100% {
+        box-shadow: inset 0 0 0 9999px rgba(210, 156, 40, 0);
+    }
+}
