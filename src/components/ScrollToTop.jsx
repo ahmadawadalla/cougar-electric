@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
-import { scrollToSectionWithHighlight } from "../utils/scrollHighlight";
+import { scrollToSectionWithHighlight } from "../utils/scrollHighlight.js";
 
 function ScrollToTop() {
     const { pathname, hash } = useLocation();
