@@ -1,5 +1,5 @@
 import { Link, useLocation, useNavigate } from "react-router-dom";
-import { scrollToSectionWithHighlight } from "../utils/scrollHighlight";
+import { scrollToSectionWithHighlight } from "../utils/ScrollHighlight.js";
 
 /**
  * A Link that scrolls to a section by hash, even when the URL already
